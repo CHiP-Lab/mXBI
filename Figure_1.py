@@ -346,6 +346,13 @@ with open(result_filename, "a+") as file_object:
 # compute and save additional Statistics on median amount of trials
 MedianTrials = sessions_df.groupby(['animal'], as_index=False)['trials'].median()
 
+# due to a low number of trials per session, animal n trials per sessions are computed as mean instead of median
+MedianTrials['trials'][MedianTrials['animal'] == 'n'] = sum(sessions_df[sessions_df['animal'] == 'n']['trials']) / \
+                                                        len(sessions_df[sessions_df['animal'] == 'n']['trials'])
+
+# Round the average amount of trials per session
+MedianTrials['trials'] = round(MedianTrials['trials'])
+
 if savetable:
     MedianTrials.to_csv(r'./analysis_output/Figure_1_MedianTrials.csv', sep=',', index=False)
     MedianTrials.to_csv(r'./analysis_output/Figure_1_MedianTrials.txt', sep=',', index=False)
