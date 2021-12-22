@@ -351,7 +351,7 @@ MedianTrials['trials'][MedianTrials['animal'] == 'n'] = sum(sessions_df[sessions
                                                         len(sessions_df[sessions_df['animal'] == 'n']['trials'])
 
 # Round the average amount of trials per session
-MedianTrials['trials'] = round(MedianTrials['trials'])
+MedianTrials['trials'] = np.floor(MedianTrials['trials'])
 
 if savetable:
     MedianTrials.to_csv(r'./analysis_output/Figure_1_MedianTrials.csv', sep=',', index=False)
