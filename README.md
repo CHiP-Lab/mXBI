@@ -1,4 +1,4 @@
-# H1 Flexible auditory training, psychophysics, and enrichment of common marmosets with an automated, touchscreen-based system
+# Flexible auditory training, psychophysics, and enrichment of common marmosets with an automated, touchscreen-based system
 
 **Calapai, A., Cabrera-Moreno, J., Moser, T., Jeschke, M.**
 
