@@ -1,7 +1,8 @@
 # Flexible auditory training, psychophysics, and enrichment of common marmosets with an automated, touchscreen-based system
 
-**Calapai, A., Cabrera-Moreno, J., Moser, T., Jeschke, M.**
+**Calapai, A.\*, Cabrera-Moreno, J.\*, Moser, T., Jeschke, M.\#**
 
+\* - contributed equally; \# - corresponding author
 
 This document illustrates the steps required to reproduce the plots and tables on which the manuscripts' figures, statistics and tables are based. Plots that compose the figures are generated from python scripts located in the folder data_analysis. Each python script opens one or multiple curated data files contained in the folder data_analysis/data and produces multiple output files that are ultimately saved into the folder data_analysis/analysis_output. 
 
