@@ -18,6 +18,9 @@ sounds = ['./data/clip1_MS.wav',
          './data/clip2_MS.wav',
          './data/clip3_MS.wav',]
 
+psdData = './PSD_data.csv'
+
+# Spectrogram and waveform plots
 for s in sounds:
     samplingFrequency, signalData = wavfile.read(s)
 
@@ -36,3 +39,14 @@ for s in sounds:
     
     plt.show()
 
+# Power spectral demsity plot
+psdDF = pd.read_csv(psdData)
+plt.figure(figsize=(5, 4))
+plt.plot(psdDF['freq'], psdDF['power'])
+plt.title('PSD: power spectral density')
+plt.xlabel('Frequency')
+plt.ylabel('Power')
+plt.tight_layout()
+plt.show()
+
+plt.show()
