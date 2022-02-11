@@ -14,29 +14,18 @@ from scipy.io import wavfile
 from scipy import signal
 
 # Read the wav file (mono)
-sounds = 'clip5_MS.wav'
-    # r'C:\Users\jmoreno\Desktop\clipsMS\clip5_MS.wav',]
-    # r'Y:\home\jcabreramoreno\code\python\programs\toneGenerator\monoTones\tones\PureTone_Ramped_4000.wav']
-    # r'Y:\home\jcabreramoreno\data\superDF\vocs\1500c100_mono.wav']
+sounds = './data/clip5_MS.wav'
+
 for s in sounds:
     samplingFrequency, signalData = wavfile.read(s)
-     
-    
+
     # Plot the signal read from wav file
     plt.subplot(211)
     plt.title('Spectrogram ')
     
-    
-    # signalData = signalData[:-114]
-    # print(f'signal data: {signalData}')
-    # print(f'lenght signal data: {len(signalData)}')
-    
-    # print(f'sampling Freq: {samplingFrequency}')
-    
     plt.plot(signalData)
     plt.xlabel('Sample')
     plt.ylabel('Amplitude')
-    # plt.xlim(0,15000)
     
     
     plt.subplot(212)
