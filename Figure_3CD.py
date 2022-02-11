@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-This script generates plots and tables related to Figure 2 of the manuscript:
+This script generates plots and tables related to Figure 3 of the manuscript:
 
 "Flexible auditory training, psychophysics, and enrichment
 of common marmosets with an automated, touchscreen-based system"
