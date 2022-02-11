@@ -14,9 +14,9 @@ from scipy.io import wavfile
 from scipy import signal
 
 # Read the wav file (mono)
-sounds = ['./audio_clip/clip1_MS.wav',
-         './audio_clip/clip2_MS.wav',
-         './audio_clip/clip3_MS.wav',]
+sounds = ['./audio_clips/clip1_MS.wav',
+         './audio_clips/clip2_MS.wav',
+         './audio_clips/clip3_MS.wav',]
 
 psdData = './data/PSD_data.csv'
 
@@ -25,6 +25,7 @@ for s in sounds:
     samplingFrequency, signalData = wavfile.read(s)
 
     # Plot the signal read from wav file
+    plt.figure()
     plt.subplot(211)
     plt.title('Spectrogram ')
     
@@ -40,6 +41,7 @@ for s in sounds:
     plt.show()
 
 # Power spectral demsity plot
+plt.figure()
 psdDF = pd.read_csv(psdData)
 plt.figure(figsize=(5, 4))
 plt.plot(psdDF['freq'], psdDF['power'])
@@ -47,6 +49,5 @@ plt.title('PSD: power spectral density')
 plt.xlabel('Frequency')
 plt.ylabel('Power')
 plt.tight_layout()
-plt.show()
 
 plt.show()
