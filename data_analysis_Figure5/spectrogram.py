@@ -29,21 +29,10 @@ for s in sounds:
     plt.xlabel('Sample')
     plt.ylabel('Amplitude')
     
-    
     plt.subplot(212)
     plt.specgram(signalData,Fs=samplingFrequency, cmap='jet')
     plt.xlabel('Time')
     plt.ylabel('Frequency')
-    
-    # Computes the power of spectral density (PSD)
-    freqs, psd = signal.welch(signalData)
-    
-    plt.figure(figsize=(5, 4))
-    plt.plot(freqs*samplingFrequency, 10*np.log10(psd))
-    plt.title('PSD: power spectral density')
-    plt.xlabel('Frequency')
-    plt.ylabel('Power')
-    plt.tight_layout()
     
     plt.show()
 
