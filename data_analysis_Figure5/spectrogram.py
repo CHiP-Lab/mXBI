@@ -14,11 +14,11 @@ from scipy.io import wavfile
 from scipy import signal
 
 # Read the wav file (mono)
-sounds = ['./data/clip1_MS.wav',
-         './data/clip2_MS.wav',
-         './data/clip3_MS.wav',]
+sounds = ['./audio_clip/clip1_MS.wav',
+         './audio_clip/clip2_MS.wav',
+         './audio_clip/clip3_MS.wav',]
 
-psdData = './PSD_data.csv'
+psdData = './data/PSD_data.csv'
 
 # Spectrogram and waveform plots
 for s in sounds:
