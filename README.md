@@ -17,13 +17,9 @@ All plots are imported and processed with the software Affinity Designer 1.8.1 t
 1. Set up a python 3.9 environment (Figure 5, in a separate folder, requires python 3.6)
 
 2. Install the following modules:
-   1. pandas 1.1.4
-   2. seaborn 0.11.1 
-   3. scipy 1.5.4
-   4. pingouin 0.3.12
-   5. numpy 1.19.4
-   6. pathlib 1.0.1
-   7. psignifit 0.1 (only for Figure 5 and in a separate python environment)
+   1. seaborn 0.11.1 
+   2. pingouin 0.3.12
+   3. psignifit 0.1 (only for Figure 5 and in a separate python environment)
 
    Note: other used modules, native to python 3.9 (e.g. string), are not listed.
 
