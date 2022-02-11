@@ -14,7 +14,9 @@ from scipy.io import wavfile
 from scipy import signal
 
 # Read the wav file (mono)
-sounds = './data/clip5_MS.wav'
+sounds = ['./data/clip1_MS.wav',
+         './data/clip2_MS.wav',
+         './data/clip3_MS.wav',]
 
 for s in sounds:
     samplingFrequency, signalData = wavfile.read(s)
