@@ -87,7 +87,7 @@ if saveplot:
     # Plot each sound
     for s in range(0, len(sounds)):
         samplingFrequency, signalData = wavfile.read(sounds[s])
-        ax[s].set_title(sounds[s].split('/')[1][0:-1 - 3], fontsize=labelFontSize)
+        ax[s].set_title(sounds[s].split(os.sep)[1][0:-1 - 3], fontsize=labelFontSize)
 
         ax[s].plot(signalData)
         ax[s + 5].specgram(signalData, Fs=samplingFrequency, cmap='jet')
