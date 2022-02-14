@@ -34,8 +34,8 @@ import pingouin as pg
 # =============================================
 # Setting plotting parameters
 sizeMult = 1
-saveplot = 0  # 1 or 0; 1 saves plots in the folder "./analysis_output" without showing them; 0 shows without plotting
-savetable = 0  # 1 or 0; 1 saves tables in "./analysis_output" without showing them
+saveplot = 1  # 1 or 0; 1 saves plots in the folder "./analysis_output" without showing them; 0 shows without plotting
+savetable = 1  # 1 or 0; 1 saves tables in "./analysis_output" without showing them
 
 labelFontSize = 6
 
