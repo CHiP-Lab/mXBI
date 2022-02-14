@@ -43,7 +43,8 @@ CRT_minimumTrials = 100
 CRT_minimumTrials_TS = 3000
 
 pd.options.mode.chained_assignment = None
-save_path = os.path.join((Path('.')).resolve(), 'analysis_output')
+save_path = "./analysis_output/"
+# save_path = os.path.join((Path('.')).resolve(), 'analysis_output')
 
 # =============================================
 # Load the data for Figure 1
