@@ -7,7 +7,7 @@ Created on Thu Aug 13 13:51:13 2020
 Marmoset spectrogram
 """
 
-
+import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.io import wavfile
@@ -37,11 +37,8 @@ for s in sounds:
     plt.specgram(signalData,Fs=samplingFrequency, cmap='jet')
     plt.xlabel('Time')
     plt.ylabel('Frequency')
-    
-    plt.show()
 
 # Power spectral demsity plot
-plt.figure()
 psdDF = pd.read_csv(psdData)
 plt.figure(figsize=(5, 4))
 plt.plot(psdDF['freq'], psdDF['power'])
