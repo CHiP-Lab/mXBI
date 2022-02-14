@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 """
+WARNING: the module "psignifit" used in this script to compute psychometric thresholds requires Python 3.6
+
 This script generates the plots of Figure 5 (with relative summary tables) of the manuscript:
 "Flexible auditory training, psychophysics, and enrichment
 of common marmosets with an automated, touchscreen-based system"
@@ -42,7 +44,6 @@ CRT_minimumTrials_TS = 3000
 
 pd.options.mode.chained_assignment = None
 save_path = os.path.join((Path('.')).resolve(), 'analysis_output')
-result_filename = os.path.join(save_path, 'Figure_5B.txt')
 
 # =============================================
 # Load the data for Figure 1
@@ -163,6 +164,18 @@ if savetable:
     result.to_csv(filename_csv, sep=',', index=False)
     result.to_csv(filename_txt, sep=',', index=False)
 
+    result_filename = os.path.join(save_path, 'Figure_5B.txt')
+    with open(result_filename, "w+") as file_object:
+        file_object.seek(0)
+        data = file_object.read(100)
+        file_object.write("{} {}".format('Figure 5A: \nHearing thresholds for animal a, b, d :', thrs))
+        file_object.write("\n")
+        file_object.write("{} {}".format('CI thresholds (low) for animal a, b, d: ', CI_low))
+        file_object.write("\n")
+        file_object.write("{} {}".format('CI thresholds (high) for animal a, b, d: ', CI_high))
+        file_object.write("\n")
+
+    result_filename = os.path.join(save_path, 'Figure_5B.csv')
     with open(result_filename, "w+") as file_object:
         file_object.seek(0)
         data = file_object.read(100)
