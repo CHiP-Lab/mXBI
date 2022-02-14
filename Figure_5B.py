@@ -29,8 +29,8 @@ import os
 # =============================================
 # Setting plotting parameters
 sizeMult = 1
-saveplot = 0
-savetable = 0
+saveplot = 1
+savetable = 1
 
 labelFontSize = 6
 
@@ -43,7 +43,7 @@ CRT_minimumTrials = 100
 CRT_minimumTrials_TS = 3000
 
 pd.options.mode.chained_assignment = None
-save_path = os.path.join((Path('..')).resolve(), 'analysis_output')
+save_path = os.path.join((Path('.')).resolve(), 'analysis_output')
 result_filename = os.path.join(save_path, 'Figure_5B.txt')
 
 # =============================================
@@ -153,9 +153,6 @@ if saveplot:
     plt.savefig(filename_pdf, format='pdf')
     plt.savefig(filename_png, format='png')
 
-    # Save also into the root folder
-    plt.savefig('Figure_5.pdf', format='pdf')
-    plt.savefig('Figure_5.png', format='png')
     plt.close()
 
 # ================================================
