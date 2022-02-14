@@ -15,8 +15,8 @@ from pathlib import Path
 import os
 
 # Read the wav file (mono)
-file_path = os.path.join((Path('.')).resolve(), 'background_recordings')
-save_path = os.path.join((Path('.')).resolve(), 'analysis_output')
+file_path = "./background_recordings/'
+save_path = "./analysis_output/
 
 sounds = [ os.path.join(file_path, 'clip1_MS.wav'),
            os.path.join(file_path, 'clip2_MS.wav'),
