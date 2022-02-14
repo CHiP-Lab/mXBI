@@ -8,7 +8,7 @@ This document illustrates the steps required to reproduce the plots and tables o
 
 The estimated run time for generating all plots and tables is 15 minutes.
 
-All plots are imported and processed with the software Affinity Designer 1.8.1 to create the final figure layout, improve readability of the underlying data, and fine-tuning text size, colours, and position.
+All plots are imported and processed with the software Affinity Designer 1.8.1 to create the final figure layout, improve readability of the underlying data, and fine-tune text size, colours, and position.
 
 ## How to reproduce the plots:
 ### Installation of required software
