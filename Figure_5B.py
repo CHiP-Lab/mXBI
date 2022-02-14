@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-WARNING: the module "psignifit" used in this script to compute psychometric thresholds requires Python 3.6
-
 This script generates the plots of Figure 5 (with relative summary tables) of the manuscript:
 "Flexible auditory training, psychophysics, and enrichment
 of common marmosets with an automated, touchscreen-based system"
