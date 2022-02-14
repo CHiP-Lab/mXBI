@@ -14,14 +14,11 @@ All plots are imported and processed with the software Affinity Designer 1.8.1 t
 
 ## How to reproduce the plots:
 ### Installation of required software
-1. Set up a python 3.9 environment (Figure 5, in a separate folder, requires python 3.6)
-
+1. Set up a python 3.9 environment
 2. Install the following modules:
    1. seaborn 0.11.1 
    2. pingouin 0.3.12
-   3. psignifit 0.1 (only for Figure 5 and in a separate python environment)
-
-   Note: other used modules, native to python 3.9 (e.g. string), are not listed.
+   3. psignifit 0.1 (via: pip install https://github.com/wichmann-lab/python-psignifit/zipball/master)
 
 ### Running of scripts to recreate each figure
 
