@@ -43,7 +43,8 @@ CRT_minimumTrials = 100
 CRT_minimumTrials_TS = 3000
 
 pd.options.mode.chained_assignment = None
-result_filename = os.path.join((Path('../')).resolve(), 'data_analysis/analysis_output', 'Figure_5B.txt')
+save_path = os.path.join((Path('..')).resolve(), 'analysis_output')
+result_filename = os.path.join(save_path, 'Figure_5B.txt')
 
 # =============================================
 # Load the data for Figure 1
@@ -145,8 +146,8 @@ result['groups'] = result['groups'].replace({True: 'high', False: 'low'})
 
 if saveplot:
     # Save the plot
-    filename_pdf = os.path.join((Path('../')).resolve(), 'data_analysis/analysis_output', 'Figure_5.pdf')
-    filename_png = os.path.join((Path('../')).resolve(), 'data_analysis/analysis_output', 'Figure_5.png')
+    filename_pdf = os.path.join(save_path, 'Figure_5.pdf')
+    filename_png = os.path.join(save_path, 'Figure_5.png')
 
     # Save to the main data analysis folder
     plt.savefig(filename_pdf, format='pdf')
@@ -161,8 +162,8 @@ if saveplot:
 # Save descriptive statistics into csv and text files
 if savetable:
 
-    filename_csv = os.path.join((Path('../')).resolve(), 'data_analysis/analysis_output', 'Figure_5B_trials.csv')
-    filename_txt = os.path.join((Path('../')).resolve(), 'data_analysis/analysis_output', 'Figure_5B_trials.txt')
+    filename_csv = os.path.join(save_path, 'Figure_5B_trials.csv')
+    filename_txt = os.path.join(save_path, 'Figure_5B_trials.txt')
 
     result.to_csv(filename_csv, sep=',', index=False)
     result.to_csv(filename_txt, sep=',', index=False)
