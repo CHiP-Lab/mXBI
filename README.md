@@ -18,7 +18,7 @@ All plots are imported and processed with the software Affinity Designer 1.8.1 t
 2. Install the following modules:
    1. seaborn 0.11.1 
    2. pingouin 0.3.12
-   3. psignifit 0.1 (via: pip install https://github.com/wichmann-lab/python-psignifit/zipball/master)
+   3. psignifit 0.1 (via: `pip install https://github.com/wichmann-lab/python-psignifit/zipball/master`)
 
 ### Running of scripts to recreate each figure
 
