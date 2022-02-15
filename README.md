@@ -6,7 +6,7 @@
 
 This document illustrates the steps required to reproduce the plots and tables on which the manuscripts' figures, statistics and tables are based. Plots that compose the figures are generated from python scripts located in the folder data_analysis. Each python script opens one or multiple curated data files contained in the folder data_analysis/data and produces multiple output files that are ultimately saved into the folder data_analysis/analysis_output. 
 
-The estimated run time for generating all plots and tables is 15 minutes.
+The estimated run time for generating all plots and tables is 5 minutes.
 
 All plots are imported and processed with the software Affinity Designer 1.8.1 to create the final figure layout, improve readability of the underlying data, and fine-tune text size, colours, and position.
 
