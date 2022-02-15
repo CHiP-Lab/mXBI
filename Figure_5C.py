@@ -8,10 +8,9 @@ Marmoset spectrogram
 """
 
 import matplotlib.pyplot as plt
+import pandas as pd
 import numpy as np
 from scipy.io import wavfile
-from scipy import signal
-from pathlib import Path
 import os
 
 # Read the wav file (mono)
@@ -56,6 +55,6 @@ plt.xlabel('Frequency')
 plt.ylabel('Power')
 plt.tight_layout()
 
-filename = "{}{}{}{}{}{}".format(save_path, '/', 'Figure_5C_PSD.pdf')
+filename = "{}{}{}{}".format(save_path, '/', 'Figure_5C','_PSD.pdf')
 plt.savefig(filename, format='pdf')
 plt.close()
