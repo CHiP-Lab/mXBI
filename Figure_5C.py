@@ -46,7 +46,6 @@ for idx, s in enumerate(sounds):
            
 
 # Power spectral desity plot
-plt.figure()
 psdDF = pd.read_csv(psdData)
 plt.figure(figsize=(5, 4))
 plt.plot(psdDF['freq'], psdDF['power'])
