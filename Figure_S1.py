@@ -190,12 +190,21 @@ for m in range(0, len(monkeys_list)):
 
     test, p = sps.kruskal(a, b)
 
+     STATS = STATS.append({
+        'monkey': monkeys_list[m],
+        'test': test,
+        'task': 'Artificial Discrimination',
+        'stimulus': 'str',
+        'n': len(a),
+        'pvalue': p},
+        ignore_index=True)
+
     STATS = STATS.append({
         'monkey': monkeys_list[m],
         'test': test,
         'task': 'Artificial Discrimination',
-        'n': round(sum(ABS[(ABS['monkey'] == monkeys_list[m]) & (ABS['outcome'] == 'correct') &
-                           (ABS['task'] == 'Artificial Discrimination')]['count'])),
+        'stimulus': 'ctr',
+        'n': len(b),
         'pvalue': p},
         ignore_index=True)
 
