@@ -22,6 +22,8 @@ sounds = [ os.path.join(file_path, 'clip1_MS.wav'),
            os.path.join(file_path, 'clip2_MS.wav'),
            os.path.join(file_path, 'clip3_MS.wav')]
 
+psdData = './data/PSD_data.csv'
+
 for idx, s in enumerate(sounds):
     samplingFrequency, signalData = wavfile.read(s)
 
@@ -41,19 +43,19 @@ for idx, s in enumerate(sounds):
     filename = "{}{}{}{}{}{}".format(save_path, '/', 'Figure_5C', '_spectrogram_', idx+1, '.pdf')
     plt.savefig(filename, format='pdf')
     plt.close()
+           
+           
 
-    # Computes the power of spectral density (PSD)
-    freqs, psd = signal.welch(signalData)
-    
-    plt.figure(figsize=(5, 4))
-    plt.plot(freqs*samplingFrequency, 10*np.log10(psd))
-    plt.title('PSD: power spectral density')
-    plt.xlabel('Frequency')
-    plt.ylabel('Power')
-    plt.tight_layout()
-    
-    plt.show()
+# Power spectral desity plot
+plt.figure()
+psdDF = pd.read_csv(psdData)
+plt.figure(figsize=(5, 4))
+plt.plot(psdDF['freq'], psdDF['power'])
+plt.title('PSD: power spectral density')
+plt.xlabel('Frequency')
+plt.ylabel('Power')
+plt.tight_layout()
 
-    filename = "{}{}{}{}{}{}".format(save_path, '/', 'Figure_5C', '_PSD_', idx+1, '.pdf')
-    plt.savefig(filename, format='pdf')
-    plt.close()
+filename = "{}{}{}{}{}{}".format(save_path, '/', 'Figure_5C_PSD.pdf')
+plt.savefig(filename, format='pdf')
+plt.close()
