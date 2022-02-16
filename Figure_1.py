@@ -210,7 +210,7 @@ if savetable:
     with open(result_filename, "w+") as file_object:
         file_object.seek(0)
         data = file_object.read(100)
-        file_object.write("{} {}".format('Figure 1A: \n1st, 2nd, and 3rd quantiles of trials per session:', IQR))
+        file_object.write("{} {}".format('Figure 1B: \n1st, 2nd, and 3rd quantiles of trials per session:', IQR))
         file_object.write("\n")
         file_object.write("{} {}".format('Number of total sessions: ', len(sessions_df)))
         file_object.write("\n")
