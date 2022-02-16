@@ -190,7 +190,7 @@ for m in range(0, len(monkeys_list)):
 
     test, p = sps.kruskal(a, b)
 
-     STATS = STATS.append({
+    STATS = STATS.append({
         'monkey': monkeys_list[m],
         'test': test,
         'task': 'Artificial Discrimination',
