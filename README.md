@@ -26,3 +26,5 @@ All plots are imported and processed with the software Affinity Designer 1.8.1 t
    3. Similarly to 2, set if tables are saved by assigning the variable `savetable` to 0 or 1. 
    Note: By default, the script will not show the plots (and corresponding tables) and instead it will save them in the folder *analysis_output*.
 5. Run the scripts in any order (scripts are independent)
+
+[![DOI](https://zenodo.org/badge/436295956.svg)](https://zenodo.org/badge/latestdoi/436295956)
