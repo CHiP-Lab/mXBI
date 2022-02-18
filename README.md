@@ -27,4 +27,5 @@ All plots are imported and processed with the software Affinity Designer 1.8.1 t
    Note: By default, the script will not show the plots (and corresponding tables) and instead it will save them in the folder *analysis_output*.
 5. Run the scripts in any order (scripts are independent)
 
+Cite the code and data files:
 [![DOI](https://zenodo.org/badge/436295956.svg)](https://zenodo.org/badge/latestdoi/436295956)
